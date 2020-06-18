@@ -1,14 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect} from 'react-redux';
 import {addQuery} from '../actions/actions';
 import './search.css';
 
+const mapDispatchToProps = (dispatch, props) => ({
+  buttonClicked: () => dispatch(addQuery(props.query))
+})
+
 const AddQuery = (props) => {
-
-  const buttonClicked = () => {
-    props.addQuery(props.query)
-  }
-
 
   const handleFocus = (event) => {
     event.preventDefault()
@@ -16,10 +15,18 @@ const AddQuery = (props) => {
     listenEvent.focus()
   }
 
+  const handleButton = () => {
+    props.buttonClicked()
+  }
+
+  /* const buttonClicked = () => {
+    props.addQuery(props.query)
+  } SHORTCUT TO MAPDISPATCH */
+
   const handleEnter = (event) => {
     if (event.key === 'Enter') {
       props.onSearch();
-      buttonClicked()
+      handleButton()
     }
   }
 
@@ -34,11 +41,11 @@ const AddQuery = (props) => {
         className='input'
         onKeyPress={handleEnter} 
         />
-      <button className='search' onClick={() => {props.onSearch(); buttonClicked()}}>
+      <button className='search' onClick={() => {props.onSearch(); handleButton()}}>
         SEARCH
       </button>
     </div>
   )
 }
 
-export default connect(null, {addQuery})(AddQuery)
+export default connect(null, mapDispatchToProps)(AddQuery)
