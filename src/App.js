@@ -31,7 +31,7 @@ class App extends React.Component {
     if (query.length > 0) {
         let matches = hits.filter((param) => {
           const regex = new RegExp(`${query.replace(/^[ ]+|[ ]+$/g,'').replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}`, 'gi')
-          return param.author.match(regex)          
+          return param.author.match(regex)         
     })
 
         this.setState({
@@ -71,8 +71,8 @@ class App extends React.Component {
         created: element.created_at 
       }
 
-      if (element.author.toLowerCase() === this.state.query.replace(/^[ ]+|[ ]+$/g,'') || 
-      element.author.toUpperCase() === this.state.query.replace(/^[ ]+|[ ]+$/g,'') || 
+      if (element.author.toLowerCase() === this.state.query.toLowerCase().replace(/^[ ]+|[ ]+$/g,'') || 
+      element.author.toUpperCase() === this.state.query.toUpperCase().replace(/^[ ]+|[ ]+$/g,'') || 
       element.author === this.state.query.replace(/^[ ]+|[ ]+$/g,'')) {
         searchResults.push(results)
       }
