@@ -1,0 +1,15 @@
+.p {
+    color: rgb(230, 220, 220);
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+}
+
+a {
+    color: rgb(230, 220, 220);
+    text-decoration: none;
+}

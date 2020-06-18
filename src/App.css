@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 52px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input {
+  height: 60px;
+  width: 400px;
+  background-color: black;
+  color: rgb(246, 248, 250);
+  text-align: left;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+
+.footer {
+  font-size: 14px;
+}
+
+.messageBox {
+  background-color: rgb(151, 14, 14);
+  width: 550px;
+  height: 33px;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+ul {
+  padding: 0;
+}
+
+.message {
+  color: rgb(246, 248, 250);
+  font-size: 15px;
+}
+
+.display {
+  background-color: #0a376b;
+  padding: 15px;
+}
+
+.display:hover {
+  background-color:#082d58;
+}

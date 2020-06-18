@@ -1,0 +1,13 @@
+.search {
+    height: 62px;
+    font-size: 22px;
+    padding: 15px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(211, 214, 219);
+    cursor: pointer;
+   }
+   
+   .search:hover {
+     background-color: rgb(195, 198, 202);
+   }
