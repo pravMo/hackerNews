@@ -9,7 +9,6 @@ const AddQuery = (props) => {
     props.addQuery(props.query)
   }
 
-
   const handleFocus = (event) => {
     event.preventDefault()
       const listenEvent = event.currentTarget
