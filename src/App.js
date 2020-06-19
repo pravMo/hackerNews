@@ -13,8 +13,8 @@ class App extends React.Component {
       query : '', 
       hits : [], 
       filteredApi : null, 
-      results: null, 
-      message: ''
+      results : null, 
+      message : ''
     }
   }
 
