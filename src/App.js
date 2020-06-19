@@ -85,7 +85,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.filteredApi)
   
     const mapPN = this.state.results === null ? null : this.state.results.map((param) => {
       return (
