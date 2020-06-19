@@ -2,8 +2,8 @@ import React from 'react';
 import './news.css'
 
 const news = (props) => {
-    const story = props.sText == null ? "No Story" : props.sText
-    const comment = props.cText == null ? "No Comment" : props.cText
+    const story = props.sText === null ? "No Story" : props.sText
+    const comment = props.cText === null ? "No Comment" : props.cText
     const date = props.date.split('T')[0]
     return (
     <p className='p'>
