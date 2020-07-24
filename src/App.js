@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   onInput = (event) => {
-    const query = event.target.value
+    const {query} = event.target.value
     const {hits} = this.state
    
     if (query.length > 0) {
@@ -35,7 +35,7 @@ class App extends React.Component {
     })
 
         this.setState({
-          query: event.target.value, 
+          query: query, 
           filteredApi: matches, 
         })
 
